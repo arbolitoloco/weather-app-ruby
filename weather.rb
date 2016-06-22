@@ -11,10 +11,8 @@ require 'barometer'
 # STEP 1: USER INPUTS THEIR LOCATION
 # The user will tell you where they are by submitting their zipcode, 
 # city, landmark or Woe ID!
-#puts "What is your location? Provide your zipcode, city, landmark or Woe ID."
-#answer = gets.capitalize
-#puts answer
-answer = "Paris"
+puts "What is your location? Provide your zipcode, city, landmark or Woe ID."
+answer = gets.capitalize
 
 # STEP 2: YOU USE A PUBLIC API TO FIND OUT WHAT THE WEATHER IS IN 
 # THEIR AREA
@@ -41,7 +39,7 @@ condition = result.icon
 # Temperature
 temp = result.temperature
 
-puts "Currently in #{answer}: #{temp} and #{condition}!"
+puts "Currently in " + answer + ": " + temp.to_s + " and " + condition + "!"
 
 # Part II. Use your gem to figure out the forecast for the next
 # five days.
@@ -51,7 +49,7 @@ puts "Currently in #{answer}: #{temp} and #{condition}!"
 today = Time.new.day 
 tomorrow = Time.now.strftime("%d").to_i + 1
 
-puts "today " + today.to_s + " and tomorrow " + tomorrow.to_s
+#puts "today " + today.to_s + " and tomorrow " + tomorrow.to_s
 
 # if weather.forecast[0].starts_at.strftime("%d").to_i === tomorrow
 # 	puts "Tomorrow"
